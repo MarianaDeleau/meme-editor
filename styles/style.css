@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+/* ############ Variables modo claro y oscuro ############ */
+body.dark-theme {
+  --background-color: #2b2b2e;
+  --text-color: #eaeaea;
+  --box-shadow: inset -2px -2px 6px #4d484c;
+}
+
+body.light-theme {
+  --background-color: #eaeaea;
+  --text-color: #2b2b2e;
+  --box-shadow: inset -2px -2px 6px #dad6d6;
+  --filter: drop-shadow(3px 2px 2px #2b2b2e);
+}
+
+/* ############ Estilos de Tags ############ */
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  height: 19%;
+  background-color: var(--background-color);
+  padding: 20px 40px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+fieldset {
+  border-color: transparent;
+}
+
+main {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+h3 {
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+h5 {
+  font-weight: 300;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ############ ESTILOS DE INPUT ############ */
+label {
+  font-size: 0.8em;
+  margin-top: 10px;
+}
+
+/* RANGES */
+input[type="range"] {
+  width: 100%;
+  height: 8px;
+  font-size: 0.7em;
+  margin-top: 7px;
+  background-color: #eaeaea;
+  border-radius: 10px;
+  appearance: unset;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px;
+  border: none;
+  border-radius: 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #eaeaea;
+  border: 1px solid #2b2b2e;
+  border-radius: 50%;
+  margin-top: -6px;
+  box-shadow: 1px 1px 1px #2b2b2e;
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  height: 8px;
+  background-color: #eaeaea;
+  border: 0.5px solid #2b2b2e;
+  border-radius: 10px;
+  appearance: unset;
+  margin-top: 7px;
+  filter: drop-shadow(2px 1px 1px #2b2b2e);
+}
+
+/* TEXT AREA */
+textarea {
+  width: 100%;
+  height: 30px;
+  font-size: 0.8em;
+  border-radius: 5px;
+  color: #2b2b2e;
+  background-color: rgb(249, 196, 177);
+  border: 1px solid rgb(249, 196, 177);
+  padding: 5px 10px;
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
+textarea:hover {
+  background-color: rgb(249, 217, 208);
+}
+
+input [type="url"] {
+  font-size: 0.8em;
+}
+
+/* ############ Estilos de Header ############ */
+/* ---------- BOTONES DEL HEADER ----------  */
+header .fas {
+  margin-right: 10px;
+  pointer-events: none;
+}
+
+header .far {
+  padding: 3px;
+  margin-right: 7px;
+  pointer-events: none;
+}
+
+header button {
+  width: 100px;
+  height: 20px;
+  background-color: #ff4747;
+  border: 1px solid #e38578;
+  border-radius: 5px;
+  display: inline-block;
+  color: #eaeaea;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  font-style: normal;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 0px 1px 0px #ff6347;
+}
+
+header button:hover {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #ff4747),
+    color-stop(1, #e38578)
+  );
+  background: -moz-linear-gradient(center top, #ff4747 5%, #e38578 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6347', endColorstr='#e38578');
+  background-color: #ff6347;
+}
+
+header button:active {
+  position: relative;
+  top: 1px;
+}
+
+.buttons-header {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-button {
+  display: inline-block;
+}
+
+header ul li {
+  list-style: none;
+}
+/* ############ Estilos del Main ############ */
+/* ---------- CONTAINER DEL MEME ----------  */
+.editor-content {
+  height: 450px;
+  width: 450px;
+  margin-top: 30px;
+  filter: var(--filter);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* ---------- ESTILOS DEL IMAGEN ----------  */
+.image-meme {
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ---------- ESTILOS DE TEXTO MEME ----------  */
+.top-text {
+  height: 20%;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  display: inline;
+  text-align: center;
+  background-color: white;
+  padding: 10px 10px 0px;
+  position: static;
+}
+
+.bottom-text {
+  height: 20%;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  display: inline;
+  text-align: center;
+  background-color: white;
+  padding: 10px 10px 0px;
+  position: static;
+}
+
+.fa-align-right {
+  pointer-events: none;
+}
+.fa-align-left {
+  pointer-events: none;
+}
+.fa-align-center {
+  pointer-events: none;
+}
+
+/* ---------- BOTÓN DE DESCARGA ----------  */
+
+.download-button {
+  width: 120px;
+  height: 40px;
+  background-color: #ff4747;
+  border: 1px solid #e38578;
+  border-radius: 8px;
+  display: inline-block;
+  color: #eaeaea;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 40px;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 0px 1px 0px #e38578;
+}
+
+.download-button:hover {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #ff4747),
+    color-stop(1, #e38578)
+  );
+  background: -moz-linear-gradient(center top, #ff6347 5%, #e38578 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4747', endColorstr='#e38578');
+  background-color: #ff4747;
+}
+
+.download-button:active {
+  position: relative;
+  top: 1px;
+}
+
+/* Etilos de Footer */
+footer {
+  width: 100%;
+  height: 15%;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* ############## RESPONSIVE ############## */
+@media screen and (max-width: 950px) {
+  body {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 1.55rem;
+  }
+
+  .buttons-header {
+    width: 280px;
+  }
+
+  header {
+    width: 100%;
+    height: 40%;
+    padding: 10px 0px;
+  }
+
+  header button {
+    width: 85px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    height: 15%;
+    padding: 10px 0px;
+    box-shadow: none;
+  }
+}
